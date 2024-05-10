@@ -4,19 +4,12 @@ from print_tables import print_tables
 from get_global_quote import get_global_quote
 
 index = input("Input Delta One Index ETF: ") # The Delta One Index ETF
-# S is underlying price of Delta One Index ETF
-S = get_global_quote(index)
+S = get_global_quote(index) # Underlying price of Delta One Index ETF
 # S = round(float(input("Input price of your chosen index: ")))
 K = S # Strike price
 T = 0.5 # Time to expiration (in years)
 r = 0.0446 # Risk-free rate (U.S. 10 Year Treasury Note, currently 4.46%)
 vol = 0.12 # Volatility (Say, 12%)
-
-try:
-    S = int(S)
-except ValueError:
-    print(f"Error: Unable to fetch the underlying market price of {index}. Please enter the price manually.")
-    S = round(float(input("Enter the underlying price: ")))
 
 table_datas = []
 

@@ -29,7 +29,7 @@ To use or contribute to Black-Scholes Options Pricer, first clone the repository
 Then, install the dependencies by typing the following command on your terminal:
 
 ```sh
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 Then, rename `config_example.py` to `config.py` and replace the API Key constant with your Alpha Vantage API Key. The Alpha Vantage API Key obtains the underlying market price for your chosen Delta One Index ETF. You may obtain your free API Key [here](https://www.alphavantage.co/support/#api-key).

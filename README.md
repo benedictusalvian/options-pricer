@@ -12,8 +12,8 @@ Black-Scholes Options Pricer is an options pricer and chain builder for Delta On
 
 Black-Scholes Options Pricer uses a number of open source projects to work properly:
 
-- [requests] - Requests is an elegant and simple HTTP library for Python, built for human beings.
-- [scipy] - SciPy provides algorithms for statistics for many, different classes of problems.
+- [SciPy] - SciPy provides algorithms for statistics for many, different classes of problems.
+- [Requests] - Requests is an elegant and simple HTTP library for Python, built for human beings.
 
 And of course Black-Scholes Options Pricer itself is a free and open-source software with a [public repository][options-pricer] 
 on GitHub.
@@ -29,12 +29,12 @@ To use or contribute to Black-Scholes Options Pricer, first clone the repository
 Then, install the dependencies by typing the following command on your terminal:
 
 ```sh
-pip3 install requests scipy
+pip install -r requirements.txt
 ```
 
 Then, rename `config_example.py` to `config.py` and replace the API Key constant with your Alpha Vantage API Key. The Alpha Vantage API Key obtains the underlying market price for your chosen Delta One Index ETF. You may obtain your free API Key [here](https://www.alphavantage.co/support/#api-key).
 
-If you do not wish to obtain an Alpha Vantage API Key, you may set the underlying market price manually by doing the following:
+If you do not wish to obtain an Alpha Vantage API Key, you may set the underlying market price manually by making the following changes at `Black-Scholes.py` :
 
 ```sh
 Comment this line
@@ -52,7 +52,7 @@ Now run the following command on the terminal to run Black-Scholes Options Build
 python3 Black-Scholes.py
 ```
 
-If you input "SPY" as your ETF symbol, the following results will be printed:
+If you input "SPY" as your Input Delta One Index ETF symbol, the following results will be printed:
 
 ```sh
 Input Delta One Index ETF: SPY

@@ -10,8 +10,9 @@ def get_global_quote(symbol):
         if 'Global Quote' not in data or '05. price' not in data['Global Quote']:
             print("The returned Get Global Quote API JSON is\n", data)
             ans = "Error! Index not found"
-        price = data['Global Quote']['05. price']
-        ans = round(float(price))
+        else:
+            price = data['Global Quote']['05. price']
+            ans = round(float(price))
     else:
         print(f"Error: {response.status_code}")
         ans = "Server error!"
@@ -19,8 +20,8 @@ def get_global_quote(symbol):
     try:
         ans = int(ans)
     except ValueError:
-        print(f"Error: Unable to fetch the underlying market price of {symbol}.
-                Please enter the price manually.")
+        print(f"Error: Unable to fetch the underlying market price of {symbol}. "
+              f"Please enter the price manually.")
         ans = round(float(input("Enter the underlying price: ")))
 
     return ans

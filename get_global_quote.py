@@ -19,7 +19,8 @@ def get_global_quote(symbol):
     try:
         ans = int(ans)
     except ValueError:
-        print(f"Error: Unable to fetch the underlying market price of {symbol}. Please enter the price manually.")
+        print(f"Error: Unable to fetch the underlying market price of {symbol}.
+                Please enter the price manually.")
         ans = round(float(input("Enter the underlying price: ")))
 
     return ans
